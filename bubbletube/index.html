@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bubble&Tube</title>
+
+    <link rel="stylesheet" href="css/bulma.css" />
+    <link rel="icon" href="img/favicon.png" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@mazieres" />
+    <meta name="twitter:creator" content="@mazieres" />  
+    <meta property="og:url"                content="https://bubbletube.antonomase.fr/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Bubble Tube" />
+    <meta property="og:description"        content="Topological confinment of recomendations on YouTube" />
+    <meta property="og:image"              content="https://bubbletube.antonomase.fr/img/teaser.png" />
+    <meta property="og:image:width"              content="1200" />
+    <meta property="og:image:height"              content="630" />
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160870669-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-160870669-1');
+</script>
+
+  </head>
+
+<!-- <body bgcolor="#F3F6F3"> -->
+<body>
+
+
+<section class="hero">
+  <div class="hero-body has-text-centered" style="padding-top: 15px;padding-bottom: 15px;">
+    <div class="container">
+      <h1 class="subtitle is-1" style="font-weight: 200; font-size: 190%;">
+        Tubes and Bubbles
+      </h1>
+      <h2 class="title" style="font-size: 155%;">
+        Topological confinement of recommendations on YouTube
+      </h2>
+      <img src="img/duckbubble.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding-bottom:0px;">
+      <p class="has-text-weight-light" style="font-size:65%; padding-bottom:5px"><i>(<a href="https://spreadprivacy.com/google-filter-bubble-study/" target="_blank">image source</a>)</i></p>
+      <!-- <div class="content is-medium"> -->
+        <p class="has-text-weight-light" style="font-size:85%"><i>Supplemental material to <a href="https://arxiv.org/abs/2001.05324" target="_blank">the article</a> published in </i>PlosOne<i> by <a href="https://camilleroth.eu" target="_blank">Camille Roth</a>, <a href="https://antonomase.fr/" target="_blank">Antoine Mazieres</a> and <a href="http://www.telmomenezes.net/" target="_blank">Telmo Menezes.</a></i></p>
+      </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</section>
+
+<div class="tabs is-centered" id="main">
+  <ul>
+    <li class="is-active">
+      <a href="./index.html">
+        <span class="icon is-small"><i class="fas" aria-hidden="true"></i></span>
+        <span>Main results</span>
+      </a>
+    </li>
+    <li>
+      <a href="./paper.html">
+        <span class="icon is-small"><i class="fas" aria-hidden="true"></i></span>
+        <span>Paper</span>
+      </a>
+    </li>
+    <li>
+      <a href="./data.html">
+        <span class="icon is-small"><i class="fas" aria-hidden="true"></i></span>
+        <span>Data</span>
+      </a>
+    </li>
+    <li>
+      <a href="./code.html">
+        <span class="icon is-small"><i class="fas" aria-hidden="true"></i></span>
+        <span>Code</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- CONTENT -->
+<section class="section" style="padding-top:0px">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+
+
+
+<div class="content">
+
+  <p class="has-text-weight-normal has-text-justified" style="padding-bottom: 5px;">Contrarily to popular belief about so-called "filter bubbles", several recent studies show that recommendation algorithms generally do not contribute much, if at all, to user confinement; in some cases, they even seem to increase serendipity <span style="font-size: 80%">[see e.g., <a href="https://dl.acm.org/doi/pdf/10.1145/2566486.2568012?casa_token=ee_6YUDOiZ4AAAAA%3A_Zcnf1uL2oZAvHfhkqZ25CmKteufuPDjfmhvlknpMl84t73sRe2_UIW72CT-TfSg3NkNNxZWdDaRFA" target="_blank">1</a>, <a href="https://science.sciencemag.org/content/348/6239/1130" target="_blank">2</a>, <a href="https://www.tandfonline.com/doi/abs/10.1080/21670811.2017.1338145" target="_blank">3</a>, <a href="https://doi.org/10.1145/3018661.3018733" target="_blank">4</a>, <a href="https://pubsonline.informs.org/doi/abs/10.1287/mksc.2017.1051" target="_blank">5</a>, <a href="https://www.tandfonline.com/doi/full/10.1080/1369118X.2018.1444076" target="_blank">6</a>]</span>.</p>
+  <p class="has-text-weight-normal has-text-justified" style="padding-bottom: 5px;">Our study demonstrates however that this may not be the case on YouTube: be it in topological, topical or temporal terms, <b>we show that the landscape of what we call mean-field YouTube recommendations is often prone to confinement dynamics</b>. Besides, content for which confinement appears to be most significant also happens to garner the highest audience and thus plausibly viewing time.</p>
+  <p class="has-text-weight-normal has-text-justified" style="font-size: 95%;">More technically:</p>
+  <ul style="font-size: 95%;" class="has-text-justified">
+    <li>We have developed an innovative protocol to extract reliable <b>video-centric recommendation graphs from YouTube</b> based on a quantitative and longitudinal analysis of the platform's behavior.</li>
+    <br>
+    <li>We show that video-centric recommendation <b>graphs with higher entropies</b> (in terms of navigation) <b>counter-intuitively exhibit lower diversity</b> (in terms of distinct number of accessible videos). Put differently, some videos are at the root of an isotropic navigation in a more limited space of videos. These videos are additionally amongst the most viewed.</li>
+    <img src="./img/entropy.png" style="display: block; margin-left: auto; margin-right: auto; width: 80%; padding-top:10px; padding-bottom:20px;">
+    <img src="./img/graphs.png" style="display: block; margin-left: auto; margin-right: auto; width: 80%; padding-top:10px; padding-bottom:0px;">
+    <li>We confirm with the help of a human-based validation protocol that <b>topological confinement is associated with semantic confinement</b>. We further quantitatively nuance this phenomenon in terms of the intrinsic quality of videos (topics, consensus, audience).</li>
+    <br>
+    <li>We demonstrate that there are several reasons to believe that the temporal evolution of recommendations associated with a video does not go against the above-mentioned phenomena.</li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<section class="section" style="padding-top:0px;padding-bottom:10px">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+
+<div class="content is-small has-text-centered">
+  <p style="margin-bottom:3px"><b>Made in Berlin at <a href="https://cmb.hu-berlin.de/en/" target="_blank">Centre Marc Bloch</a> (<a href="https://www.cnrs.fr/" target="_blank">CNRS</a> / <a href="https://www.hu-berlin.de/en/" target="_blank">Humboldt</a>) | <a href="https://cmb.huma-num.fr/" target="_blank">Computational Social Science team</a></b></p>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+  
+</body>
+</html>

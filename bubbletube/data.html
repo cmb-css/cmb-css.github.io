@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>BubbleTube</title>
+
+    <link rel="stylesheet" href="css/bulma.css" />
+    <link rel="icon" href="img/favicon.png" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@mazieres" />
+    <meta name="twitter:creator" content="@mazieres" />  
+    <meta property="og:url"                content="https://bubbletube.antonomase.fr/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Bubble Tube" />
+    <meta property="og:description"        content="Topological confinment of recomendations on YouTube" />
+    <meta property="og:image"              content="https://bubbletube.antonomase.fr/img/teaser.png" />
+    <meta property="og:image:width"              content="1200" />
+    <meta property="og:image:height"              content="630" />
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160870669-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-160870669-1');
+</script>
+
+
+  </head>
+
+<!-- <body bgcolor="#F3F6F3"> -->
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body has-text-centered" style="padding-top: 15px;padding-bottom: 15px;">
+      <div class="container">
+        <h1 class="subtitle is-1" style="font-weight: 200; font-size: 190%;">
+          Tubes and Bubbles
+        </h1>
+        <h2 class="title" style="font-size: 155%;">
+          Topological confinement of recommendations on YouTube
+        </h2>
+        <img src="img/duckbubble.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding-bottom:0px;">
+        <p class="has-text-weight-light" style="font-size:65%; padding-bottom:5px"><i>(<a href="https://spreadprivacy.com/google-filter-bubble-study/" target="_blank">image source</a>)</i></p>
+        <!-- <div class="content is-medium"> -->
+          <p class="has-text-weight-light" style="font-size:85%"><i>Supplemental material to <a href="https://arxiv.org/abs/2001.05324" target="_blank">the article</a> published in </i>PlosOne<i> by <a href="https://camilleroth.eu" target="_blank">Camille Roth</a>, <a href="https://antonomase.fr/" target="_blank">Antoine Mazieres</a> and <a href="http://www.telmomenezes.net/" target="_blank">Telmo Menezes.</a></i></p>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
+
+  <div class="tabs is-centered" id="main">
+    <ul>
+      <li>
+        <a href="./index.html">
+          <span class="icon is-small"><i class="fas" aria-hidden="true"></i></span>
+          <span>Main results</span>
+        </a>
+      </li>
+      <li>
+        <a href="./paper.html">
+          <span class="icon is-small"><i class="fas" aria-hidden="true"></i></span>
+          <span>Paper</span>
+        </a>
+      </li>
+      <li class="is-active">
+        <a href="./data.html">
+          <span class="icon is-small"><i class="fas" aria-hidden="true"></i></span>
+          <span>Data</span>
+        </a>
+      </li>
+      <li>
+        <a href="./code.html">
+          <span class="icon is-small"><i class="fas" aria-hidden="true"></i></span>
+          <span>Code</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+<!-- CONTENT -->
+<section class="section" style="padding-top:0px">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+
+<div class="content">
+    <p style="text-align: center;"><a href="https://www.nakala.fr/nakala/data/11280/fcd04889"><b>DOWNLOAD</b></a></p>
+    <p style="font-size: 80%;" class="has-text-weight-light"><i>In order to anonymize the data, YouTube video and channel IDs have been mapped to integers that are consistent across all datasets. See the <a href="./paper.html">paper</a> for a detailed description of the methodology.</i></p>
+  <ul class="has-text-justified">
+    <li>We considered ~ 650 YouTube videos as <b>seeds</b>.</li>
+    <p style="font-size: 90%;">Half are related to the 2019 European Parliement election, the other half were picked based on their popularity on Reddit and Wikipedia. The file <tt>./seeds.csv</tt> maps the video IDs to their sample origin.</p>
+    <img src="./img/table.png" style="display: block; margin-left: auto; margin-right: auto; width: 100%; padding-top:10px; padding-bottom:20px;">
+
+    <li style="padding-top:10px">We gathered YouTube's suggestions for these seeds, every 10 minutes, at least 2000 times (~ 15 days).</li>
+    <p style="font-size: 90%;">Each line of <tt>./long_crawl.csv</tt> logs the video ID of the seed, followed by the ordered list of suggestions found. This data reveals a clear <i>plateau</i> of highly frequent suggestions.</p>
+    <img src="./img/plateau.png" style="display: block; margin-left: auto; margin-right: auto; width: 70%; padding-top:10px; padding-bottom:20px;">
+
+    <li style="padding-top:10px">For each seed, we recursively crawled frequent suggestions up to depth 3.</li>
+    <img src="./img/deepcrawl.png" style="display: block; margin-left: auto; margin-right: auto; width: 70%; padding-top:10px; padding-bottom:20px;">
+    <p style="font-size: 90%;">Each line in <tt>./recursice-crawls/{videoID}.csv</tt> logs the node's video ID, the video ID of a suggestion belonging to the plateau, and the depth at which it was suggested.</p>
+
+    <li style="padding-top:10px">Lastly, for each visited page, we gathered a few metadata about the video.</li>
+    <p style="font-size: 90%;">Each line in <tt>./video_metadata.csv</tt> logs: video ID, channel ID, nb. of subscribers, nb. of views, category ID (see <tt>./categories_ids.csv</tt>), nb. of likes, nb. of dislikes, age of the video (in seconds).</p>
+
+  </ul>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<section class="section" style="padding-top:0px;padding-bottom:10px">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half">
+  
+  <div class="content is-small has-text-centered">
+    <p style="margin-bottom:3px"><b>Made in Berlin at <a href="https://cmb.hu-berlin.de/en/" target="_blank">Centre Marc Bloch</a> (<a href="https://www.cnrs.fr/" target="_blank">CNRS</a> / <a href="https://www.hu-berlin.de/en/" target="_blank">Humboldt</a>) | <a href="https://cmb.huma-num.fr/" target="_blank">Computational Social Science team</a></b></p>
+  </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+	  
+</body>
+</html>

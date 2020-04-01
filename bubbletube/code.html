@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tubes and Bubbles</title>
+
+    <link rel="stylesheet" href="css/bulma.css" />
+    <link rel="icon" href="img/favicon.png" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@mazieres" />
+    <meta name="twitter:creator" content="@mazieres" />  
+    <meta property="og:url"                content="https://cmb-css.github.io/bubbletube/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Tubes and Bubbles" />
+    <meta property="og:description"        content="Topological confinement of recommendations on YouTube" />
+    <meta property="og:image"              content="https://cmb-css.github.io/bubbletube/img/teaser.png" />
+    <meta property="og:image:width"              content="1200" />
+    <meta property="og:image:height"              content="628" />
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160870669-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-160870669-1');
+</script>
+
+
+  </head>
+
+<!-- <body bgcolor="#F3F6F3"> -->
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body has-text-centered" style="padding-top: 15px;padding-bottom: 15px;">
+      <div class="container">
+        <h1 class="subtitle is-1" style="font-weight: 200; font-size: 190%;">
+          Tubes and Bubbles
+        </h1>
+        <h2 class="title" style="font-size: 155%;">
+          Topological confinement of recommendations on YouTube
+        </h2>
+        <img src="img/duckbubble.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding-bottom:0px;">
+        <p class="has-text-weight-light" style="font-size:65%; padding-bottom:5px"><i>(<a href="https://spreadprivacy.com/google-filter-bubble-study/" target="_blank">image source</a>)</i></p>
+        <!-- <div class="content is-medium"> -->
+          <p class="has-text-weight-light" style="font-size:85%"><i>Supplemental material to <a href="https://arxiv.org/abs/2001.05324" target="_blank">the article</a> published in </i>PlosOne<i> by <a href="https://camilleroth.eu" target="_blank">Camille Roth</a>, <a href="https://antonomase.fr/" target="_blank">Antoine Mazieres</a> and <a href="http://www.telmomenezes.net/" target="_blank">Telmo Menezes.</a></i></p>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
+
+  <div class="tabs is-centered" id="main">
+    <ul>
+      <li>
+        <a href="./index.html">
+          <span class="icon is-small"><i class="fas" aria-hidden="true"></i></span>
+          <span>Main results</span>
+        </a>
+      </li>
+      <li>
+        <a href="./paper.html">
+          <span class="icon is-small"><i class="fas" aria-hidden="true"></i></span>
+          <span>Paper</span>
+        </a>
+      </li>
+      <li>
+        <a href="./data.html">
+          <span class="icon is-small"><i class="fas" aria-hidden="true"></i></span>
+          <span>Data</span>
+        </a>
+      </li>
+      <li class="is-active">
+        <a href="./code.html">
+          <span class="icon is-small"><i class="fas" aria-hidden="true"></i></span>
+          <span>Code</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+<!-- CONTENT -->
+<section class="section" style="padding-top:0px">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+
+<div class="content">
+        <p style="text-align: center;"><a href="https://www.nakala.fr/data/11280/5b91a1c4" target="_blank"><b>DOWNLOAD</b></a></p>
+        <ul class="has-text-justified">
+            <li><tt>./various-computations.nb</tt> (mathematica notebook)</li>
+            <p style="font-size: 90%;">Studying the plateau ; Seed information exploration ; Plateau shape exploration ; Recommendation lifespans (figures 1 and 2) ; Visualization of human study (figure 6); Category transitions (figure 7) ; Provenance of new suggestions (figure 8)</p>
+            <br>
+            <li><tt>./recommendation-graphs.ipynb</tt> (jupyter notebook)</li>
+            <p style="font-size: 90%;">Metadata enriching ; Random walks, induced recommendation graphs and sample visualizations (figure 4), Correlation graphs (figure 5), Generate HTML pages for human study.</p>
+            <br>
+            <li><tt>./crawler/</tt> (python/golang scripts)</li>
+            <p style="font-size: 90%;">Seeds were splitted among several servers. This is the code for one server.</p>
+        </ul>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<section class="section" style="padding-top:0px;padding-bottom:10px">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+
+<div class="content is-small has-text-centered">
+  <p style="margin-bottom:3px"><b>Made in Berlin at <a href="https://cmb.hu-berlin.de/en/" target="_blank">Centre Marc Bloch</a> (<a href="https://www.cnrs.fr/" target="_blank">CNRS</a> / <a href="https://www.hu-berlin.de/en/" target="_blank">Humboldt</a>) | <a href="https://cmb.huma-num.fr/" target="_blank">Computational Social Science team</a></b></p>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+  
+</body>
+</html>
