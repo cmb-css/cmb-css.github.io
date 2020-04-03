@@ -15,10 +15,10 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@mazieres" />
     <meta name="twitter:creator" content="@mazieres" />  
-    <meta property="og:url"                content="https://bubbletube.antonomase.fr/" />
+    <meta property="og:url"                content="https://cmb-css.github.io/bubbletube/" />
     <meta property="og:type"               content="website" />
     <meta property="og:title"              content="Bubble Tube" />
-    <meta property="og:description"        content="Topological confinment of recomendations on YouTube" />
+    <meta property="og:description"        content="Topological confinement of recommendations on YouTube" />
     <meta property="og:image"              content="https://bubbletube.antonomase.fr/img/teaser.png" />
     <meta property="og:image:width"              content="1200" />
     <meta property="og:image:height"              content="630" />
@@ -50,9 +50,9 @@
         Topological confinement of recommendations on YouTube
       </h2>
       <img src="img/duckbubble.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding-bottom:0px;">
-      <p class="has-text-weight-light" style="font-size:65%; padding-bottom:5px"><i>(<a href="https://spreadprivacy.com/google-filter-bubble-study/" target="_blank">image source</a>)</i></p>
+      <p class="has-text-weight-light" style="font-size:65%; padding-bottom:5px"><i>(<a href="https://spreadprivacy.com/google-filter-bubble-study/" target="_blank">image source, courtesy of DuckDuckGo</a>)</i></p>
       <!-- <div class="content is-medium"> -->
-        <p class="has-text-weight-light" style="font-size:85%"><i>Supplemental material to <a href="https://arxiv.org/abs/2001.05324" target="_blank">the article</a> published in </i>PlosOne<i> by <a href="https://camilleroth.eu" target="_blank">Camille Roth</a>, <a href="https://antonomase.fr/" target="_blank">Antoine Mazieres</a> and <a href="http://www.telmomenezes.net/" target="_blank">Telmo Menezes.</a></i></p>
+        <p class="has-text-weight-light" style="font-size:85%"><i>Supplemental material to <a href="https://arxiv.org/abs/2001.05324" target="_blank">the article</a> published in </i>PLOS ONE<i> by <a href="https://camilleroth.eu" target="_blank">Camille Roth</a>, <a href="https://antonomase.fr/" target="_blank">Antoine Mazieres</a> and <a href="http://www.telmomenezes.net/" target="_blank">Telmo Menezes.</a></i></p>
       </div>
       <!-- </div> -->
     </div>
@@ -99,17 +99,19 @@
 <div class="content">
 
   <p class="has-text-weight-normal has-text-justified" style="padding-bottom: 5px;">Contrarily to popular belief about so-called "filter bubbles", several recent studies show that recommendation algorithms generally do not contribute much, if at all, to user confinement; in some cases, they even seem to increase serendipity <span style="font-size: 80%">[see e.g., <a href="https://dl.acm.org/doi/pdf/10.1145/2566486.2568012?casa_token=ee_6YUDOiZ4AAAAA%3A_Zcnf1uL2oZAvHfhkqZ25CmKteufuPDjfmhvlknpMl84t73sRe2_UIW72CT-TfSg3NkNNxZWdDaRFA" target="_blank">1</a>, <a href="https://science.sciencemag.org/content/348/6239/1130" target="_blank">2</a>, <a href="https://www.tandfonline.com/doi/abs/10.1080/21670811.2017.1338145" target="_blank">3</a>, <a href="https://doi.org/10.1145/3018661.3018733" target="_blank">4</a>, <a href="https://pubsonline.informs.org/doi/abs/10.1287/mksc.2017.1051" target="_blank">5</a>, <a href="https://www.tandfonline.com/doi/full/10.1080/1369118X.2018.1444076" target="_blank">6</a>]</span>.</p>
-  <p class="has-text-weight-normal has-text-justified" style="padding-bottom: 5px;">Our study demonstrates however that this may not be the case on YouTube: be it in topological, topical or temporal terms, <b>we show that the landscape of what we call mean-field YouTube recommendations is often prone to confinement dynamics</b>. Besides, content for which confinement appears to be most significant also happens to garner the highest audience and thus plausibly viewing time.</p>
+  <p class="has-text-weight-normal has-text-justified" style="padding-bottom: 5px;">Our study demonstrates however that this may not be the case on YouTube: be it in topological, topical or temporal terms, <b>we show that the landscape defined by non-personalized YouTube recommendations is generally likely to confine users in homogeneous clusters of videos</b>. Besides, content for which confinement appears to be most significant also happens to garner the highest audience and thus plausibly viewing time.</p>
+  <p class="has-text-weight-normal has-text-justified" style="font-size: 95%;"><i>To simplify our findings very roughly and informally, let us say that there are two main stereotypes of YouTube videos: some with a high number of views, featuring loopy and not very diverse suggestions </i>(left)<i>, and some with a low number of views, which generally feature more diverse and exploratory suggestions </i>(right)<i>.</i></p>
+  <img src="./img/explain.png" style="display: block; margin-left: auto; margin-right: auto; width: 100%; padding-top:10px; padding-bottom:20px;">
   <p class="has-text-weight-normal has-text-justified" style="font-size: 95%;">More technically:</p>
   <ul style="font-size: 95%;" class="has-text-justified">
     <li>We have developed an innovative protocol to extract reliable <b>video-centric recommendation graphs from YouTube</b> based on a quantitative and longitudinal analysis of the platform's behavior.</li>
     <br>
-    <li>We show that video-centric recommendation <b>graphs with higher entropies</b> (in terms of navigation) <b>counter-intuitively exhibit lower diversity</b> (in terms of distinct number of accessible videos). Put differently, some videos are at the root of an isotropic navigation in a more limited space of videos. These videos are additionally amongst the most viewed.</li>
+    <li>We show that video-centric recommendation graphs with higher entropies (in terms of navigation) counter-intuitively exhibit lower diversity (in terms of distinct number of accessible videos). Put differently, in this case, <b>while a user may appear to visit more "locations", this however occurs within an overall smaller "space"</b>. In technical terms, video-centric recommendation graphs with higher entropies (in terms of navigation) counter-intuitively exhibit lower diversity (in terms of distinct number of accessible videos).  Some videos are at the root of an isotropic navigation in a more limited space of videos. <b>These videos are additionally amongst the most viewed.</b></li>
     <img src="./img/entropy.png" style="display: block; margin-left: auto; margin-right: auto; width: 80%; padding-top:10px; padding-bottom:20px;">
     <img src="./img/graphs.png" style="display: block; margin-left: auto; margin-right: auto; width: 80%; padding-top:10px; padding-bottom:0px;">
-    <li>We confirm with the help of a human-based validation protocol that <b>topological confinement is associated with semantic confinement</b>. We further quantitatively nuance this phenomenon in terms of the intrinsic quality of videos (topics, consensus, audience).</li>
+    <li>We confirm with the help of a human-based validation protocol that <b>topological confinement is associated with semantic confinement</b>. In other words, recommendation graphs with higher entropies are not only smaller, they are also semantically more homogeneous. We further quantitatively nuance this phenomenon in terms of the intrinsic quality of videos (topics, consensus, audience).</li>
     <br>
-    <li>We demonstrate that there are several reasons to believe that the temporal evolution of recommendations associated with a video does not go against the above-mentioned phenomena.</li>
+    <li>We demonstrate that there are several reasons to believe that the temporal evolution of recommendations associated with a video does not go against the above-mentioned phenomena – put shortly, newly-appearing recommendations over time are actually not so novel, often found in the vicinity of the initialy recommendations.</li>
   </ul>
 </div>
 
